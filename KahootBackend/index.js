@@ -54,7 +54,7 @@ const Exam = mongoose.model('Exam', examSchema);
 
 const app = express();
 app.use(cors({
-  origin: 'http://10.0.61.41:5173',
+  origin: 'http://10.121.6.0:5173',
   credentials: true,
 }));
 app.use(express.urlencoded({ extended: true }));
@@ -65,7 +65,7 @@ app.use(cookieParser());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://10.0.61.41:5173',
+    origin: 'http://10.121.6.0:5173',
     methods: ['GET', 'POST']
   }
 });
